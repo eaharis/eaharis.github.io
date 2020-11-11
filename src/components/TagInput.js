@@ -42,7 +42,7 @@ const TagInput = ({ placeholder, whitelist }) => {
     };
 
     return <Tags className="form-control tagifyBootstrap"
-        settings={{ whitelist: whitelist, enforceWhitelist: true, templates: templates }}
+        settings={{ whitelist: whitelist, enforceWhitelist: true, templates: templates, editTags: false }}
         placeholder={placeholder}
     />;
 };
