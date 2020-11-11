@@ -10,6 +10,7 @@ import CalendarIcon from "./calendar.png";
 
 import Tags from "@yaireo/tagify/dist/react.tagify" // React-wrapper file
 import "@yaireo/tagify/dist/tagify.css" // Tagify CSS
+import foodWhitelist from './FoodWhitelist';
 /*
  * dsjljd 
 */
@@ -117,6 +118,9 @@ const Profile = () => {
                                 <Col md={12} className="mb-3">
                                     <Form.Label className="font-weight-bold"><FontAwesomeIcon icon={faUtensils} /> Favourite foods and cuisines</Form.Label>
                                     {/* TODO: Fix */}
+                                    <Tags settings={{
+                                        whitelist: foodWhitelist, enforceWhitelist: true
+                                    }} placeholder="Enter a favourite food of yours here" />
                                     <input name='tags3-1' class='countries form-control' placeholder="Enter a favourite food of yours here" />
                                 </Col>
                             </Form.Row>
