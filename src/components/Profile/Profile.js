@@ -24,12 +24,13 @@ const Profile = () => {
                     <Card>
                         <Card.Body class="card-body">
                             <div class="d-flex flex-column align-items-center text-center">
-                                <div class="rounded-circle" style={{ background: "url('https://in.bmscdn.com/iedb/artist/images/website/poster/large/andrew-garfield-19835-24-03-2017-13-52-23.jpg')", backgroundSize: "contain", width: "150px", height: "150px", position: "relative", textAlign: "center", overflow: "hidden" }}>
+                                <div class="rounded-circle" style={{ background: "url('https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE4MDAzNDEwODQwOTQ2MTkw/ada-lovelace-20825279-1-402.jpg')", backgroundSize: "contain", width: "150px", height: "150px", position: "relative", textAlign: "center", overflow: "hidden" }}>
                                     <p style={{ position: "absolute", margin: "0", background: "rgba(0,0,0,0.7)", bottom: 0, width: "100%" }}>
-                                        <FontAwesomeIcon icon={faCamera} color="white" />                                        </p>
+                                        <FontAwesomeIcon icon={faCamera} color="white" />
+                                    </p>
                                 </div>
                                 <div className="mt-3">
-                                    <h4>Jack Buckley</h4>
+                                    <h4>Ada Lovelace</h4>
                                     <Form.Row>
                                         <Col md={12} className="mb-3">
                                             <Form.Group>
@@ -84,11 +85,11 @@ const Profile = () => {
                             <Form.Row>
                                 <Col md={4} className="mb-3">
                                     <Form.Label className="font-weight-bold"><FontAwesomeIcon icon={faUser} /> First name</Form.Label>
-                                    <Form.Control as="input" placeholder="First name" value="Jack" required />
+                                    <Form.Control as="input" placeholder="Ada" required />
                                 </Col>
                                 <Col md={4} className="mb-3">
                                     <Form.Label className="font-weight-bold">Last name</Form.Label>
-                                    <Form.Control as="input" placeholder="Last name" value="Buckley" required />
+                                    <Form.Control as="input" placeholder="Lovelace" required />
                                 </Col>
                                 <Col md={4} className="mb-3">
                                     <Form.Label className="font-weight-bold"> Username</Form.Label>
@@ -96,7 +97,7 @@ const Profile = () => {
                                         <InputGroup.Prepend>
                                             <InputGroup.Text>@</InputGroup.Text>
                                         </InputGroup.Prepend>
-                                        <Form.Control as="input" placeholder="Username" value="Jack" required />
+                                        <Form.Control as="input" placeholder="programmerNum1" required />
                                     </InputGroup>
                                 </Col>
                             </Form.Row>
@@ -117,7 +118,7 @@ const Profile = () => {
                             <Form.Row>
                                 <Col md={12} className="mb-3">
                                     <Form.Label className="font-weight-bold"><FontAwesomeIcon icon={faUtensils} /> Favourite foods and cuisines</Form.Label>
-                                    <TagInput placeholder="Enter a favourite food of yours like Pizza or Chinese Food" whitelist={foodWhitelist} />
+                                    <TagInput placeholder="Enter a favourite food/cuisine of yours like Pizza or Chinese Food" whitelist={foodWhitelist} />
                                 </Col>
                             </Form.Row>
                             <hr />
