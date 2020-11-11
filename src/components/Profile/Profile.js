@@ -119,7 +119,33 @@ const Profile = () => {
                                     <Form.Label className="font-weight-bold"><FontAwesomeIcon icon={faUtensils} /> Favourite foods and cuisines</Form.Label>
                                     {/* TODO: Fix */}
                                     <Tags settings={{
-                                        whitelist: foodWhitelist, enforceWhitelist: true
+                                        whitelist: foodWhitelist, enforceWhitelist: true, templates: {
+                                            tag: function (tagData) {
+                                                try {
+                                                    return `<tag title='${tagData.value}' contenteditable='false' spellcheck="false" class='tagify__tag ${tagData.class ? tagData.class : ""}' ${this.getAttributes(tagData)}>
+                                                                        <x title='remove tag' class='tagify__tag__removeBtn'></x>
+                                                                        <div>
+                                                                            ${tagData.image ?
+                                                            `<img onerror="this.style.visibility='hidden'" src='${tagData.image}' style="height: 1em; margin-right: 0.2em;">` : ''
+                                                        }
+                                                                            <span class='tagify__tag-text'>${tagData.value}</span>
+                                                                        </div>
+                                                                    </tag>`
+                                                }
+                                                catch (err) { }
+                                            },
+
+                                            dropdownItem: function (tagData) {
+                                                try {
+                                                    return `<div class='tagify__dropdown__item ${tagData.class ? tagData.class : ""}' tagifySuggestionIdx="${tagData.tagifySuggestionIdx}">
+                                                                            <img onerror="this.style.visibility = 'hidden'"
+                                                                                src='${tagData.image}' style="height: 1em; margin-right: 0.2em;">
+                                                                            <span>${tagData.value}</span>
+                                                                        </div>`
+                                                }
+                                                catch (err) { }
+                                            }
+                                        },
                                     }} placeholder="Enter a favourite food of yours here" />
                                     <input name='tags3-1' class='countries form-control' placeholder="Enter a favourite food of yours here" />
                                 </Col>
