@@ -24,10 +24,26 @@
     border-radius: 2px;
 }
 
-textarea {
-    resize: none;
-}
-
 .slider {
     margin-left: 1em;
 };
+
+#freq .slider-selection {
+    background: #ffc107;
+}
+
+#freq.slider-handle {
+    background: #ffc107;
+}
+
+.slider-tick.in-selection {
+    background: #ffc107;
+}
+
+.slider-handle.round {
+    background: #ffc107;
+}
+
+.Profile {
+    text-align: left;
+}
