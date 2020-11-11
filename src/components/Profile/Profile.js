@@ -117,7 +117,6 @@ const Profile = () => {
                             <Form.Row>
                                 <Col md={12} className="mb-3">
                                     <Form.Label className="font-weight-bold"><FontAwesomeIcon icon={faUtensils} /> Favourite foods and cuisines</Form.Label>
-                                    {/* TODO: Fix */}
                                     <TagInput placeholder="Enter a favourite food of yours like Pizza or Chinese Food" whitelist={foodWhitelist} />
                                 </Col>
                             </Form.Row>
@@ -125,8 +124,14 @@ const Profile = () => {
                             <Form.Row>
                                 <Col md={12} className="mb-3">
                                     <Form.Label class="font-weight-bold"><FontAwesomeIcon icon={faStore} /> Favourite restaurants</Form.Label>
-                                    {/* TODO: Fix */}
-                                    <input name='tags4-1' class='countries form-control' placeholder="Enter a favourite restaurant of yours here" />
+                                    {/* TODO: Use proper API to source the restaurants */}
+                                    <TagInput placeholder="Enter a favourite restaurant of yours like Burrito Banditos" whitelist={
+                                        [
+                                            { value: "Burrito Banditos", image: "https://logo.clearbit.com/burritobanditos.com" },
+                                            { value: "Quik Chik", image: "https://logo.clearbit.com/quikchik.ca" },
+                                            { value: "Subway", image: "https://logo.clearbit.com/subway.ca" },
+                                        ]
+                                    } />
                                 </Col>
                             </Form.Row>
                             <hr />
