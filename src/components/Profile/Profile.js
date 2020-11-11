@@ -24,7 +24,9 @@ const Profile = () => {
                     <Card>
                         <Card.Body class="card-body">
                             <div class="d-flex flex-column align-items-center text-center">
-                                <div class="rounded-circle" style={{ background: "url('https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE4MDAzNDEwODQwOTQ2MTkw/ada-lovelace-20825279-1-402.jpg')", backgroundSize: "contain", width: "150px", height: "150px", position: "relative", textAlign: "center", overflow: "hidden" }}>
+                                {/* TODO: Allow for profile picture to be updated by clicking */}
+                                <div className="profilePicture rounded-circle">
+                                    <img src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE4MDAzNDEwODQwOTQ2MTkw/ada-lovelace-20825279-1-402.jpg" />
                                     <p style={{ position: "absolute", margin: "0", background: "rgba(0,0,0,0.7)", bottom: 0, width: "100%" }}>
                                         <FontAwesomeIcon icon={faCamera} color="white" />
                                     </p>

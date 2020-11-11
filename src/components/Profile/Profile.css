@@ -24,16 +24,25 @@
     border-radius: 2px;
 } */
 
-/* Hides the placeholder text if at least one tag is present */
-.tagify__tag + .tagify__input::before{
-    display:none !important;
-  }
-
-/* Fixes styling issues between the Tagify input and the Bootstrap input style */
-.tagifyBootstrap {
-    line-height: 1 !important;
-    padding: 0 !important;
+.profilePicture {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
 }
+
+.profilePicture img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px; 
+}
+  
+.profilePicture:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
 
 .slider {
     margin-left: 1em;
