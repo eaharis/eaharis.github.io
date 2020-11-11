@@ -26,10 +26,10 @@ const Profile = () => {
             <script src="bootstrap-slider.min.js"></script>
             <link href="bootstrap-slider.min.css" rel="stylesheet" />
             <Row>
-                <Col md={4} class="mb-3">
+                <Col md={4} className="mb-3">
                     <Card>
-                        <Card.Body class="card-body">
-                            <div class="d-flex flex-column align-items-center text-center">
+                        <Card.Body className="card-body">
+                            <div className="d-flex flex-column align-items-center text-center">
                                 {/* TODO: Allow for profile picture to be updated by clicking */}
                                 <div className="profilePicture rounded-circle">
                                     <img src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE4MDAzNDEwODQwOTQ2MTkw/ada-lovelace-20825279-1-402.jpg" />
@@ -60,25 +60,25 @@ const Profile = () => {
                                 </DropdownButton>
                             </ListGroup.Item>
                             <ListGroup.Item className="d-flex justify-content-between align-items-center flex-wrap">
-                                <h6 class="mb-0"><img width="24" height="24" src={CalendarIcon} class="mr-2" />External calendar</h6>
+                                <h6 className="mb-0"><img width="24" height="24" src={CalendarIcon} className="mr-2" />External calendar</h6>
                                 <DropdownButton title="Outlook" variant="outline-secondary" type="button">
                                     {/* TODO: do something when clicked */}
                                 </DropdownButton>
                             </ListGroup.Item>
                             <ListGroup.Item className="d-flex justify-content-between align-items-center flex-wrap">
-                                <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-twitter mr-2 icon-inline text-info"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>Twitter</h6>
+                                <h6 className="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-twitter mr-2 icon-inline text-info"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>Twitter</h6>
                                 <DropdownButton title="@lovelace" variant="outline-secondary" type="button">
                                     {/* TODO: do something when clicked */}
                                 </DropdownButton>
                             </ListGroup.Item>
                             <ListGroup.Item className="d-flex justify-content-between align-items-center flex-wrap">
-                                <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-instagram mr-2 icon-inline text-danger"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>Instagram</h6>
+                                <h6 className="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-instagram mr-2 icon-inline text-danger"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>Instagram</h6>
                                 <DropdownButton title="@lovelace" variant="outline-secondary" type="button">
                                     {/* TODO: do something when clicked */}
                                 </DropdownButton>
                             </ListGroup.Item>
                             <ListGroup.Item className="d-flex justify-content-between align-items-center flex-wrap">
-                                <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-facebook mr-2 icon-inline text-primary"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>Facebook</h6>
+                                <h6 className="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-facebook mr-2 icon-inline text-primary"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>Facebook</h6>
                                 <DropdownButton title="@lovelace" variant="outline-secondary" type="button">
                                     {/* TODO: do something when clicked */}
                                 </DropdownButton>
@@ -132,7 +132,7 @@ const Profile = () => {
                             <hr />
                             <Form.Row>
                                 <Col md={12} className="mb-3">
-                                    <Form.Label class="font-weight-bold"><FontAwesomeIcon icon={faStore} /> Favourite restaurants</Form.Label>
+                                    <Form.Label className="font-weight-bold"><FontAwesomeIcon icon={faStore} /> Favourite restaurants</Form.Label>
                                     {/* TODO: Use proper API to source the restaurants */}
                                     <TagInput placeholder="Enter a favourite restaurant of yours like Burrito Banditos" whitelist={
                                         [
