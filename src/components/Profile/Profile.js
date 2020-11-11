@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import { Container, Row, Col, Card, Breadcrumb, Form, ListGroup, Dropdown, DropdownButton, InputGroup } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -13,7 +13,9 @@ import foodWhitelist from './FoodWhitelist';
 import TagInput from '../TagInput';
 
 import ReactBootstrapSlider from 'react-bootstrap-slider';
-import "bootstrap-slider/dist/css/bootstrap-slider.css"
+import "bootstrap-slider/dist/css/bootstrap-slider.css";
+
+import PhoneInput from 'react-phone-number-input/input'
 
 import Swal from 'sweetalert2';
 
@@ -21,6 +23,8 @@ import Swal from 'sweetalert2';
  * dsjljd 
 */
 const Profile = () => {
+
+    const [phoneNumber, setPhoneNumber] = useState("");
     return (
         <Container className="Profile">
             <script src="bootstrap-slider.min.js"></script>
@@ -111,10 +115,9 @@ const Profile = () => {
                             </Form.Row>
                             <hr />
                             <Form.Row>
-                                {/* TODO: Validation of mobile number. Is there a React component we can use? */}
                                 <Col md={6} className="mb-3">
                                     <Form.Label className="font-weight-bold"><FontAwesomeIcon icon={faPhoneAlt} /> Mobile</Form.Label>
-                                    <Form.Control as="input" placeholder="(XXX) XXX-XXXX" required />
+                                    <PhoneInput className="form-control" country="CA" value={phoneNumber} onChange={setPhoneNumber} placeholder="(555) 555-5555" maxLength={14} />
                                 </Col>
                                 {/* TODO: Validation of email. Is there a React component we can use? */}
                                 <Col className="mb-3">
