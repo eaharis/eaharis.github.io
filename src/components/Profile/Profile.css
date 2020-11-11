@@ -43,21 +43,28 @@
     padding-bottom: 100%;
 }
 
-
 .slider {
     margin-left: 1em;
-};
+}
 
-#freq .slider-selection {
+div#freq {
+    width: 90%;
+}
+
+#freq .slider-selection.tick-slider-selection {
     background: #ffc107;
 }
 
-#freq.slider-handle {
+.slider-selection.tick-slider-selection {
     background: #ffc107;
+}
+
+.slider-selection.tick-slider-selection {
+    background: #ffc107 !important;
 }
 
 .slider-tick.in-selection {
-    background: #ffc107;
+    background: #ffc107 !important;
 }
 
 .slider-handle.round {
@@ -66,8 +73,4 @@
 
 .Profile {
     text-align: left;
-}
-
-body {
-    color: red;
 }

@@ -11,6 +11,10 @@ import CalendarIcon from "./calendar.png";
 
 import foodWhitelist from './FoodWhitelist';
 import TagInput from '../TagInput';
+
+import ReactBootstrapSlider from 'react-bootstrap-slider';
+import "bootstrap-slider/dist/css/bootstrap-slider.css"
+
 /*
  * dsjljd 
 */
@@ -158,7 +162,8 @@ const Profile = () => {
                                     <Col md={6}>
                                         <Form.Label>Alert frequency</Form.Label>
                                         {/* TODO: Fix */}
-                                        <input data-slider-id="freq" style={{ width: "90%" }} class="form-group" id="ex13" type="text" data-slider-ticks="[Daily, Weekly, Biweekly, Monthly]" data-slider-ticks-snap-bounds="30" data-slider-ticks-labels='["$Daily", "$Weekly", "$Biweekly", "$Monthly"]' />
+                                        {/* <input data-slider-id="freq" style={{ width: "90%" }} class="form-group" id="ex13" type="text" data-slider-ticks="[Daily, Weekly, Biweekly, Monthly]" data-slider-ticks-snap-bounds="30" data-slider-ticks-labels='["$Daily", "$Weekly", "$Biweekly", "$Monthly"]' /> */}
+                                        <ReactBootstrapSlider style={{ width: "90%" }} id="freq" value={0} ticks={[0, 1, 2, 3]} tooltip="hide" ticks_labels={["Daily", "Weekly", "Biweekly", "Monthly"]} />
                                     </Col>
                                 </Form.Row>
                             </Form.Row>
