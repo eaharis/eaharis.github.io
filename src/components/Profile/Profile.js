@@ -8,9 +8,9 @@ import "./Profile.css";
 import McMasterLogo from "./McMaster.png";
 import CalendarIcon from "./calendar.png";
 
-import Tags from "@yaireo/tagify/dist/react.tagify" // React-wrapper file
-import "@yaireo/tagify/dist/tagify.css" // Tagify CSS
+
 import foodWhitelist from './FoodWhitelist';
+import TagInput from '../TagInput';
 /*
  * dsjljd 
 */
@@ -118,35 +118,7 @@ const Profile = () => {
                                 <Col md={12} className="mb-3">
                                     <Form.Label className="font-weight-bold"><FontAwesomeIcon icon={faUtensils} /> Favourite foods and cuisines</Form.Label>
                                     {/* TODO: Fix */}
-                                    <Tags className="form-control tagifyBootstrap" settings={{
-                                        whitelist: foodWhitelist, enforceWhitelist: true, templates: {
-                                            tag: function (tagData) {
-                                                try {
-                                                    return `<tag title='${tagData.value}' contenteditable='false' spellcheck="false" class='tagify__tag ${tagData.class ? tagData.class : ""}' ${this.getAttributes(tagData)}>
-                                                                        <x title='remove tag' class='tagify__tag__removeBtn'></x>
-                                                                        <div>
-                                                                            ${tagData.image ?
-                                                            `<img onerror="this.style.visibility='hidden'" src='${tagData.image}' style="height: 1em; margin-right: 0.2em;">` : ''
-                                                        }
-                                                                            <span class='tagify__tag-text'>${tagData.value}</span>
-                                                                        </div>
-                                                                    </tag>`
-                                                }
-                                                catch (err) { }
-                                            },
-
-                                            dropdownItem: function (tagData) {
-                                                try {
-                                                    return `<div class='tagify__dropdown__item ${tagData.class ? tagData.class : ""}' tagifySuggestionIdx="${tagData.tagifySuggestionIdx}">
-                                                                            <img onerror="this.style.visibility = 'hidden'"
-                                                                                src='${tagData.image}' style="height: 1em; margin-right: 0.2em;">
-                                                                            <span>${tagData.value}</span>
-                                                                        </div>`
-                                                }
-                                                catch (err) { }
-                                            }
-                                        },
-                                    }} placeholder='Enter a favourite food of yours like Pizza or Chinese Food' />
+                                    <TagInput placeholder="Enter a favourite food of yours like Pizza or Chinese Food" whitelist={foodWhitelist} />
                                 </Col>
                             </Form.Row>
                             <hr />
