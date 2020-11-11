@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import { Container, Row, Col, Card, Breadcrumb, Form, ListGroup, Dropdown, DropdownButton, InputGroup } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCamera, faPencilAlt, faUser, faPhoneAlt, faEnvelope, faUtensils, faBell, faStore, faSave } from '@fortawesome/free-solid-svg-icons'
-import "./Profile.css"
+import "./Profile.css";
 
 import McMasterLogo from "./McMaster.png";
 import CalendarIcon from "./calendar.png";
@@ -118,7 +118,7 @@ const Profile = () => {
                                 <Col md={12} className="mb-3">
                                     <Form.Label className="font-weight-bold"><FontAwesomeIcon icon={faUtensils} /> Favourite foods and cuisines</Form.Label>
                                     {/* TODO: Fix */}
-                                    <Tags settings={{
+                                    <Tags className="form-control tagifyBootstrap" settings={{
                                         whitelist: foodWhitelist, enforceWhitelist: true, templates: {
                                             tag: function (tagData) {
                                                 try {
@@ -146,8 +146,7 @@ const Profile = () => {
                                                 catch (err) { }
                                             }
                                         },
-                                    }} placeholder="Enter a favourite food of yours here" />
-                                    <input name='tags3-1' class='countries form-control' placeholder="Enter a favourite food of yours here" />
+                                    }} placeholder='Enter a favourite food of yours like Pizza or Chinese Food' />
                                 </Col>
                             </Form.Row>
                             <hr />
