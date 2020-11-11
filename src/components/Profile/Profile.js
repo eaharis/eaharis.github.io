@@ -145,9 +145,8 @@ const Profile = () => {
                             <Form.Row>
                                 <Col md={12} className="mb-3">
                                     <Form.Label className="font-weight-bold"><FontAwesomeIcon icon={faBell} /> Alerts</Form.Label>
-                                    {/* TODO: Make switches work */}
-                                    <Form.Switch label="Suggest me new restaurants based on my cuisine preferences" />
-                                    <Form.Switch label="Alert me when my favourite restaurants have active promotions" />
+                                    <Form.Switch id="suggestNewRestaurantsSwitch" label="Suggest me new restaurants based on my cuisine preferences" />
+                                    <Form.Switch id="promotionAlertSwitch" label="Alert me when my favourite restaurants have active promotions" />
                                 </Col>
                                 <Form.Row className="w-100">
                                     <Col md={6}>
