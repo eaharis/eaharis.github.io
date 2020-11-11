@@ -10,7 +10,7 @@ import CalendarIcon from "./calendar.png";
 
 
 import foodWhitelist from './FoodWhitelist';
-import TagInput from '../TagInput';
+import TagInput from '../TagInput/TagInput';
 
 import ReactBootstrapSlider from 'react-bootstrap-slider';
 import "bootstrap-slider/dist/css/bootstrap-slider.css";
