@@ -15,6 +15,8 @@ import TagInput from '../TagInput';
 import ReactBootstrapSlider from 'react-bootstrap-slider';
 import "bootstrap-slider/dist/css/bootstrap-slider.css"
 
+import Swal from 'sweetalert2';
+
 /*
  * dsjljd 
 */
@@ -165,7 +167,14 @@ const Profile = () => {
                                 </Form.Row>
                             </Form.Row>
                         </Card.Body>
-                        <Button variant="warning" size="lg" block={true}><FontAwesomeIcon icon={faSave} /> Save</Button>
+                        <Button variant="warning" size="lg" block={true} onClick={() => Swal.fire({
+                            position: 'top-right',
+                            icon: 'success',
+                            title: 'Profile saved',
+                            toast: true,
+                            showConfirmButton: false,
+                            timer: 1500
+                        })}><FontAwesomeIcon icon={faSave} /> Save</Button>
                     </Card>
                 </Col>
             </Row>
