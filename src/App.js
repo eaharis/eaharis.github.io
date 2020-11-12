@@ -17,12 +17,12 @@ class App extends Component {
       return (
             <div className="App">
                 <Switch>
-                    <Route path={pages.baseURL + pages.BROWSE} component={Browse} />
-                    <Route path={pages.baseURL + pages.PROMOTIONS} component={Promotions} />
-                    <Route path={pages.baseURL + pages.DINEIN} component={DineIn} />
-                    <Route path={pages.baseURL + pages.STORIES} component={Stories} />
-                    <Route path={pages.baseURL + pages.SIGNIN} component={SignIn} />
-                    <Route path={pages.baseURL + pages.HOME} component={Home} />
+                    <Route path={pages.BROWSE} component={Browse} />
+                    <Route path={pages.PROMOTIONS} component={Promotions} />
+                    <Route path={pages.DINEIN} component={DineIn} />
+                    <Route path={pages.STORIES} component={Stories} />
+                    <Route path={pages.SIGNIN} component={SignIn} />
+                    <Route path={pages.HOME} component={Home} />
                 </Switch>
             </div>
       );
