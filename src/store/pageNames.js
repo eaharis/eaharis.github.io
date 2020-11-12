@@ -1,4 +1,5 @@
-export const HOME = "/";
+const BASEURL = "";
+export const HOME = BASEURL + "/";
 export const BROWSE = "/browse";
 export const PROMOTIONS = "/promotions";
 export const DINEIN = "/dine-in";
