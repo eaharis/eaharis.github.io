@@ -17,14 +17,7 @@ class App extends Component {
       return (
         <HashRouter basename='testRepo'>
             <div className="App">
-                <Switch>
-                    <Route path={pages.BROWSE} component={Browse} />
-                    <Route path={pages.PROMOTIONS} component={Promotions} />
-                    <Route path={pages.DINEIN} component={DineIn} />
-                    <Route path={pages.STORIES} component={Stories} />
-                    <Route path={pages.SIGNIN} component={SignIn} />
-                    <Route exact path={pages.HOME} component={Home} />
-                </Switch>
+                <Home />
             </div>
        </HashRouter>
       );

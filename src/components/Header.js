@@ -9,13 +9,15 @@ import NavDropdown from  'react-bootstrap/NavDropdown'
 import Form from 'react-bootstrap'
 import * as actionTypes from "../store/actionTypes"
 import * as pages from '../store/pageNames';
+import { BrowserRouter, Route, Switch, HashRouter } from 'react-router-dom';
 
-const baseURL = "testrepo";
+const baseURL = "testRepo";
 
 class Header extends Component {
     render() {
         return (
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" >
+            <HashRouter basename="/"> 
+                <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" >
                 <Navbar.Brand href={pages.HOME}>
                     <img
                         alt=""
@@ -29,20 +31,29 @@ class Header extends Component {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href={baseURL + pages.HOME} onSelect={this.props.clickedHome}> Home</Nav.Link>
-                        <Nav.Link href={baseURL + pages.BROWSE} onSelect={this.props.clickedBrowse}>Browse</Nav.Link>
-                        <Nav.Link href={baseURL + pages.PROMOTIONS} onSelect={this.props.clickedPromotions}>Promotions</Nav.Link>
-                        <Nav.Link href={baseURL + pages.DINEIN} onSelect={this.props.clickedDineIn}>Dine In</Nav.Link>
-                        <Nav.Link href={baseURL + pages.STORIES} onSelect={this.props.clickedStories}>Stories</Nav.Link>
+                        <Nav.Link href={pages.HOME} onSelect={this.props.clickedHome}> Home</Nav.Link>
+                        <Nav.Link href={pages.BROWSE} onSelect={this.props.clickedBrowse}>Browse</Nav.Link>
+                        <Nav.Link href={pages.PROMOTIONS} onSelect={this.props.clickedPromotions}>Promotions</Nav.Link>
+                        <Nav.Link href={pages.DINEIN} onSelect={this.props.clickedDineIn}>Dine In</Nav.Link>
+                        <Nav.Link href={pages.STORIES} onSelect={this.props.clickedStories}>Stories</Nav.Link>
                         <NavDropdown title="Accessibility" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="#increase-size" className="dropdown">a | A</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                     <Nav className="nav-right">
-                        <Nav.Link href={baseURL + pages.SIGNIN} className="sign-in" onSelect={this.props.clickedSignIn}>Sign Up / Login</Nav.Link>
+                        <Nav.Link href={pages.SIGNIN} className="sign-in" onSelect={this.props.clickedSignIn}>Sign Up / Login</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
+           <Switch>
+                    <Route path={pages.BROWSE} component={Browse} />
+                    <Route path={pages.PROMOTIONS} component={Promotions} />
+                    <Route path={pages.DINEIN} component={DineIn} />
+                    <Route path={pages.STORIES} component={Stories} />
+                    <Route path={pages.SIGNIN} component={SignIn} />
+                    <Route exact path={pages.HOME} component={Home} />
+            </Switch>
+        </HashRouter>
         )
     }
 
