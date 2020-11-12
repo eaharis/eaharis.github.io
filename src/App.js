@@ -8,11 +8,9 @@ import * as pages from './store/pageNames';
 class App extends Component {
   render() {
       return (
-        <HashRouter basename='testRepo'>
             <div className="App">
                 <Home />
             </div>
-       </HashRouter>
       );
     }
   }
