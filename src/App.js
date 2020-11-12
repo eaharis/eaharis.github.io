@@ -21,8 +21,8 @@ class App extends Component {
                     <Route path={pages.PROMOTIONS} component={Promotions} />
                     <Route path={pages.DINEIN} component={DineIn} />
                     <Route path={pages.STORIES} component={Stories} />
-                    <Route path={pages.SIGNIN} component={SignIn} />
-                    <Route path={pages.HOME} component={Home} />
+                    <Route path="https://eaharis.github.io/testRepo/sign-in" component={SignIn} />
+                    <Route path="https:eaharis.github.io/testRepo/" component={Home} />
                 </Switch>
             </div>
       );
