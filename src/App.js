@@ -15,7 +15,7 @@ import * as pages from './store/pageNames';
 class App extends Component {
   render() {
       return (
-        <HashRouter basename=''>
+        <HashRouter basename='testRepo'>
             <div className="App">
                 <Switch>
                     <Route path={pages.BROWSE} component={Browse} />
