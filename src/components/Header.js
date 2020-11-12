@@ -10,7 +10,7 @@ import Form from 'react-bootstrap'
 import * as actionTypes from "../store/actionTypes"
 import * as pages from '../store/pageNames';
 
-const baseURL = "testRepo/#";
+const baseURL = "testRepo/";
 
 class Header extends Component {
     render() {
