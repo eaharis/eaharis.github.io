@@ -1,4 +1,5 @@
 import './App.css';
+import Home from './containers/Home';
 
 import { Component } from "react";
 import { BrowserRouter, Route, Switch, HashRouter } from 'react-router-dom';
