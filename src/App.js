@@ -18,12 +18,12 @@ class App extends Component {
         <HashRouter basename='/'>
             <div className="App">
                 <Switch>
-                    <Route path='/browse' component={Browse} />
-                    <Route path="/promotions" component={Promotions} />
-                    <Route path="/dine-in" component={DineIn} />
-                    <Route path="/stories" component={Stories} />
-                    <Route path="/sign-in" component={SignIn} />
-                    <Route exact path="/" component={Home} />
+                    <Route path={pages.BROWSE} component={Browse} />
+                    <Route path={pages.PROMOTIONS} component={Promotions} />
+                    <Route path={pages.DINEIN} component={DineIn} />
+                    <Route path={pages.STORIES} component={Stories} />
+                    <Route path={pages.SIGNIN} component={SignIn} />
+                    <Route exact path={pages.HOME} component={Home} />
                 </Switch>
             </div>
        </HashRouter>
