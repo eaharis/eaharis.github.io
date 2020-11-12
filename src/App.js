@@ -9,12 +9,13 @@ import Stories from './containers/Stories';
 
 
 import { Component } from "react";
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, HashRouter } from 'react-router-dom';
 import * as pages from './store/pageNames';
 
 class App extends Component {
   render() {
       return (
+        <HashRouter basename='/'>
             <div className="App">
                 <Switch>
                     <Route path={pages.BROWSE} component={Browse} />
@@ -22,9 +23,10 @@ class App extends Component {
                     <Route path={pages.DINEIN} component={DineIn} />
                     <Route path={pages.STORIES} component={Stories} />
                     <Route path="https://eaharis.github.io/testRepo/sign-in" component={SignIn} />
-                    <Route path="https:eaharis.github.io/testRepo/" component={Home} />
+                    <Route exact path="https:eaharis.github.io/testRepo/" component={Home} />
                 </Switch>
             </div>
+       </HashRouter>
       );
     }
   }
