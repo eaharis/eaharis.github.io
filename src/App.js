@@ -1,12 +1,4 @@
 import './App.css';
-import Home from './containers/Home';
-import Browse from './containers/Browse';
-import DineIn from './containers/DineIn';
-import Promotions from './containers/Promotions';
-import SignIn from './containers/SignIn';
-import Stories from './containers/Stories';
-
-
 
 import { Component } from "react";
 import { BrowserRouter, Route, Switch, HashRouter } from 'react-router-dom';
